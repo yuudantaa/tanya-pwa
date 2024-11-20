@@ -136,58 +136,46 @@
 }
  
  
-/*
-  Movie Item
-*/
- 
+/* tim items */
+.makan {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px;
+  margin-top: 32px;
+}
+
 .makan-item {
-  width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  background-color: white;
+  border-radius: 5px;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
- 
-.makan-item__header {
-  position: relative;
-}
- 
-.makan-item .makan-item__header .makan-item__header__poster {
+
+.makan-item_gambar {
   width: 100%;
+  height: 420px;
+  object-fit: cover;
 }
- 
-.makan-item .makan-item__header .makan-item__header__rating {
-  position: absolute;
-  padding: 8px;
-  bottom: 20px;
-  left: 0;
-  display: inline-block;
-  background-color: black;
-  color: white;
-}
- 
-.makan-item .makan-item__header .makan-item__header__rating .makan-item__header__rating__score {
-  margin-left: 10px;
-}
- 
-.makan-item .makan-item__content {
+
+.makan-item_isi {
   padding: 16px;
 }
- 
-.makan-item .makan-item__content h3 {
-  margin: 0 0 10px 0;
+
+.makan-item_nama {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 8px 0;
 }
- 
-.makan-item .makan-item__content h3 a {
-  color: #db0000;
-  text-decoration: none;
+
+.makan-item_asal {
+  font-size: 18px;
+  color: #757575;
 }
- 
-.makan-item .makan-item__content p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4; /* number of lines to show */
-  -webkit-box-orient: vertical;
+
+.makan-item_rating {
+  font-size: 18px;
+  margin-top: 8px;
+  color: #616161;
 }
  
  

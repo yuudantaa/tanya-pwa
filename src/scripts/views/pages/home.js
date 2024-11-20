@@ -12,7 +12,7 @@ const Home = {
         <p class="desc-home">Ora jajan wajan melayang</P><br>
         
         <div class="content">
-        <h2 class="content__heading">Now Playing in Cinema</h2>
+        
         <div id="kuliner" class="kuliner">
         </div>
       </div>
@@ -22,8 +22,8 @@ const Home = {
     async afterRender() {
       const kuliner = await RestoDbSource.home();
       const kulinerContainer = document.querySelector('#kuliner');
-      kuliner.forEach((makan) => {
-        kulinerContainer.innerHTML += createRestoItemTemplate(makan);
+      kuliner.forEach((restaurant) => {
+        kulinerContainer.innerHTML += createRestoItemTemplate(restaurant);
       });
     },
   };
