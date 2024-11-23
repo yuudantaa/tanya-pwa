@@ -88,22 +88,40 @@
     width: 100%;
   }
 
-  /* Hero Section */
+  /* skip link Button */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: gray;
+  color: white;
+  padding: 8px;
+  transition: top 0.3s;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Hero Section */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 450px;
-    background-image: url('../public/hero-image_4.jpg');
-    background-position: center;
-    background-size:auto;
-  }
-  
-  .hero_inner {
-    max-width: 2000px;
-    color: #fff;
-    padding: 2em;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  max-height: 400px;
+  text-align: center;
+  background-image: url('../public/hero-image_4.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.hero_inner {
+  max-width: 1000px;
+  color: #fff;
+  padding: 2em;
+}
    
   .judul{
     font-size: 30px;
@@ -144,7 +162,6 @@
   gap: 16px;
   margin: 32px 0;
 }
- 
  
 /* tim items */
 .makan {

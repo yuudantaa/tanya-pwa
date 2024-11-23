@@ -1,5 +1,5 @@
 import CONFIG from '../../globals/config';
- 
+
 const createRestoDetailTemplate = (restaurant) => `
   <h2 class="makan__title">${restaurant.name}</h2>
   <img class="makan__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
@@ -19,13 +19,13 @@ const createRestoDetailTemplate = (restaurant) => `
   <div class="makan__overview">
     <h3>Review</h3>
     ${restaurant.customerReviews && restaurant.customerReviews.length > 0
-      ? `<ul>${restaurant.customerReviews.map((review) => `<li>${review.name}: ${review.review}</li>`).join('')}</ul>`
-      : '<p>Belum ada ulasan pelanggan.</p>'}
+    ? `<ul>${restaurant.customerReviews.map((review) => `<li>${review.name}: ${review.review}</li>`).join('')}</ul>`
+    : '<p>Belum ada ulasan pelanggan.</p>'}
   </div>
 `;
 
- 
-const createRestoItemTemplate = (restaurant) => 
+
+const createRestoItemTemplate = (restaurant) =>
   `<section class="isi">
       <div class="makan">
         <article class="makan-item">
@@ -46,12 +46,12 @@ const createLikeButtonTemplate = () => `
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
- 
+
 const createLikedButtonTemplate = () => `
   <button aria-label="unlike this resto" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
- 
-export { createRestoItemTemplate, createRestoDetailTemplate,createLikeButtonTemplate,
+
+export { createRestoItemTemplate, createRestoDetailTemplate, createLikeButtonTemplate,
   createLikedButtonTemplate };

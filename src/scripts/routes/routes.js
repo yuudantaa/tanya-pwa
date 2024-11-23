@@ -8,5 +8,5 @@ const routes = {
   '/detail/:id': Detail,
   '/like': Like,
 };
- 
+
 export default routes;

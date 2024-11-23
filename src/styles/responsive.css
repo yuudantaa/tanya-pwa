@@ -46,11 +46,19 @@
     grid-column-start: 1;
     grid-column-end: 3;
   }
+
+  .hero {
+    max-width: 100%;
+  }
 }
  
 @media screen and (min-width: 800px) {
   .app-bar .app-bar__brand h1 {
     font-size: 2em;
+  }
+
+  .hero {
+    max-width: 100%;
   }
 }
  
@@ -58,16 +66,27 @@
   .kuliner {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .hero {
+    max-width: 100%; 
+  }
 }
  
 @media screen and (min-width: 1200px) {
   .kuliner {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .hero {
+    max-width: 100%; 
+  }
 }
  
 @media screen and (min-width: 1600px) {
   .kuliner {
       grid-template-columns: repeat(5, 1fr);
+  }
+  .hero {
+    max-width: 100%; 
   }
 }

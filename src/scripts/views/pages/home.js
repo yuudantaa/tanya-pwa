@@ -2,8 +2,8 @@ import RestoDbSource from '../../data/restodb-source';
 import { createRestoItemTemplate } from '../templates/template-creator';
 
 const Home = {
-    async render() {
-      return `
+  async render() {
+    return `
         <div class="hero">
             <div class="hero_inner"></div>
         </div><br>
@@ -17,16 +17,16 @@ const Home = {
         </div>
       </div>
       `;
-    },
-   
-    async afterRender() {
-      const kuliner = await RestoDbSource.home();
-      const kulinerContainer = document.querySelector('#kuliner');
-      kuliner.forEach((restaurant) => {
-        kulinerContainer.innerHTML += createRestoItemTemplate(restaurant);
-      });
-    },
-  };
-   
-   
-  export default Home;
+  },
+
+  async afterRender() {
+    const kuliner = await RestoDbSource.home();
+    const kulinerContainer = document.querySelector('#kuliner');
+    kuliner.forEach((restaurant) => {
+      kulinerContainer.innerHTML += createRestoItemTemplate(restaurant);
+    });
+  },
+};
+
+
+export default Home;

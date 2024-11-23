@@ -5,7 +5,9 @@
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "serve": "http-server dist --port 6969"
+    "serve": "http-server dist --port 6969",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src"
   },
   "author": "",
   "license": "ISC",
@@ -32,6 +34,7 @@
   "dependencies": {
     "idb": "^8.0.0",
     "regenerator-runtime": "^0.14.1",
+    "sweetalert": "^2.1.2",
     "workbox-precaching": "^7.3.0",
     "workbox-routing": "^7.3.0",
     "workbox-strategies": "^7.3.0",
